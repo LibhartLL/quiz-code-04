@@ -1,105 +1,207 @@
 /*GLOBAL DECLARATIONS*/
 * {
     margin: 0;
-    padding: 0;
+    padding: 5px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     /* debugging*/
-    /*border: 1px solid red;*/
+    /* border: 1px solid red; */
 }
 body {
     background-color: lightcyan;
-    overflow: hidden;
 }
 
-p {
-    color: blue;
-    font-size: 1.5em;
+/*header section*/
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
 }
 
-button {
-    outline: none;
-    background-color: lightblue;
+#highscores:hover {
+    cursor: pointer;
     color: darkblue;
-    font-size: 2em;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 4px;
-
+    text-align: left;
 }
 
-h1, h2 {
-    color: black;
+header h4 {
+    padding-left: 25px;
+    font-size: 20px;
+    display: inline;
+}
+
+.timer {
+    display: inline;
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* Main section */
+#inner-container {
+    padding: 20px;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
     text-align: center;
 }
 
-li {
-    list-style: none;
+#inner-container h1 {
+    color: darkblue;
+    font-size: 30px;
+}
 
-}
-/*frame of page, 100% of veiw height (vh)*/
-.outer-container {
-    padding: 5px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-}
-/* timer */
-.top-bar p {
-    float: right;
-}
-/* inside container that holds the quiz challenge and is auto margined horizontally*/
-.inner-container {
-    background-color: lightcyan;
-    height: 100em;
-    width: 50%;
+/*question stylying*/
+#question-container {
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 20px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
+    text-align: center;
 }
-/* quiz intro and main share properties*/
-/* Header/Quiz introduction section*/
-.quiz-intro, main {
+
+#question {
+    text-align: left;
+    font-size: 10 px;
+    font-weight: bold;
+}
+
+/*end container with highscores and form input*/
+#end-container h1, p {
+    text-align: left;
+}
+
+#end-container input {
+    outline: thick;
+    border-width: 1px;
+    padding: 5px;
+    width: 40%;
+    font-size: 2.5rem;
+    border-radius: 5px;
+}
+
+#end-container:focus {
+    border: 2px solid black;
+}
+
+#highscores {
+    text-align: left;
+}
+
+/* show and hide display for containers*/
+.show {
+    display: flex;
+}
+
+.hide {
     display: none;
-    margin-top: 10vh;
+}
+
+/*button styling*/
+.btn {
+    color: darkblue;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px grey;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: lightblue;
+    border-radius: 10px;
+    box-shadow: 0 3px grey;
+    cursor: pointer;
+}
+
+.btn:active {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-list {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 5px;
+    margin: 20px 0;
+}
+.btn-start {
+    width: 30%;
+    margin-top: 10px;
+}
+
+#answer-button {
+    width: 50%;
+    text-align: left;
     font-size: 10px;
 }
 
-.quiz-intro p {
+/*correct answer and wrong answer stylying*/
+
+#correct {
+    font-size: 25px;
     text-align: center;
+    color: darkblue;
+    font-style: bold italic;
+    margin: 0 100px;
 }
-/*display block, margin auto will center a button*/
-.quiz-intro button {
-    display: block;
+
+#correct h2 {
+    border-top: 2px solid black;
     margin: 0 auto;
+    text-align: center;
+    padding-top: 7px;
+}
+
+#wrong {
+    font-size: 25px;
+    text-align: center;
+    color: darkblue;
+    font-style: bold italic;
+    margin: 0 100px;
+}
+
+#wrong h2 {
+    border-top: 2px solid black;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 7px;
+}
+
+/*highscores section styling*/
+
+ol {
+    list-style-type: number;
+}
+
+/*media query section*/
+
+@media screen and (max-width: 1024px) {
+    .btn {
+        width: 100%;
+        font-size: 3.0vw;
+    }
+
+    #question {
+        font-size: 4.5vw;
+    }
+
+    h1 {
+        font-size: 4.5vw;
+    }
+
+    p {
+        font-size: 3.0vw;
+    }
 
 }
 
-/* main section that holds the quiz*/
-.main {
-    display: block;
 
-}
 
-/*question screen*/
-.question-screen {
-    display: none;
-}
 
-/*quiz-finish screen*/
-.quiz-finish {
-    display: none;
-}
-/*highscores screen*/
-.highscores {
-    display: block;
-}
-
-.highscores ol {
-    overflow-y: scroll;
-    max-height: 200px;
-}

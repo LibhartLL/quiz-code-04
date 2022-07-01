@@ -9,56 +9,62 @@
 
 </head>
 <body>
-    <!-- main outer div-->
-  <div class="outer-container">
-    <!--top bar section-->
-    <div class="top-bar">
-        <button>View Highscores</button>
-        <p>Timer: 00:00</p>
-    </div>
-    <!-- inner div section-->
-    <div class="inner-container">
+    <!-- top of page -->
+    <header>
+        <h4 id="highscores">View Highscores</h4>
+        <h4 class="timer">Timer:<span id= "timer"></span></h4>
+    </header>
+    <!-- inner container section-->
+    <div id="inner-container" class="show">
         <!-- main header/quiz intro-->
-        <header class="quiz-intro">
+        <div class="quiz-intro">
             <h1>Welcome to the JavaScript Fundamentals Quiz!</h1>
+            <br>
             <p> Try to answer the following code-realted questions within the time limit (75 second).  For every correct answer you will get 10 seconds added to your time and for every incorrect answer you will get -10 deducted from your time!</p>
-            <button>Start Quiz</button>
-        </header>
-        <!-- main quiz content-->
-        <main>
-            <section class="question-screen">
-                <h2>Question Here</h2>
-                <ul> <!-- questions will be on js-->
-                    <li><button>Answer 1</button></li>
-                    <li><button>Answer 2</button></li>
-                    <li><button>Answer 3</button></li>
-                    <li><button>Answer 4</button></li>
-                </ul>
-            </section>
-            <!-- quiz final results screen, js-->
-            <section class="quiz-finish">
-                <h2>Quiz Finished!</h2>
-                <p>Your Score: 00</p>
-                <div>
-                    <label for="">Enter Initials:</label>
-                    <input type="text">
-                    <button>Submit</button>
-                </div>
-            </section>
-            <!-- high scores screen, js-->
-            <section class="highscores">
-                <ol>
-                    <li>itials - time</li>
-                    <li>itials - time</li>
-                    <li>itials - time</li>
-                    <li>itials - time</li>
-                </ol>
-                <button>Go Back to Start</button>
-                <button>Highscores</button>
-            </section>
-        </main>
+            <button class="btn-start" id="start-game">Start Quiz</button>
+        </div>
     </div>
-  </div>
-  <script src="./assets/script.js"></script>  
+    <!-- main quiz content-->
+       
+    <div id="question-screen" class="hide">
+        <div class="question-main">
+        <div id="question"></div>
+        <div id="answer-buttons" class="btn-list"></div>
+        </div>
+    </div>
+    <!-- quiz final results screen, js-->
+    <div id="quiz-finish" class="hide">
+        <div class="score-result">
+            <div id="score-banner">
+            <h2>Quiz Finished!</h2>
+            </div>
+        </div>
+        <form id="initials-form" class="initals">
+                <p>Enter Initials:
+                    <input type="text" name="initials" id=initials class="text-initals" />
+                <button class="btn-start" id="submit-score" type="submit">Submit Score</button></p>
+                </form>
+    </div>
+
+    <!--high scores screen, js-->
+    <div id="highscores" class="hide">
+        <div class="highscores-screen">
+            <h1 class="highscore">High Scores</h1>
+                <ol id="high-scores-list" class="score-list"></ol>
+        </div>
+            <button class="btn" id="take-again">Take Quiz Again</button>
+            <button class="btn" id="clear-scores">Clear High Scores</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="hide" id="correct">
+        <h2>Correct</h2>
+    </div>
+    <div class="hide" id="wrong">
+        <h2>Wrong</h2>
+    </div>
+
+    <script src="./assets/script.js"></script>
 </body>
 </html>
