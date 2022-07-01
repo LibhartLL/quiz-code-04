@@ -1,0 +1,105 @@
+/*GLOBAL DECLARATIONS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    /* debugging*/
+    /*border: 1px solid red;*/
+}
+body {
+    background-color: lightcyan;
+    overflow: hidden;
+}
+
+p {
+    color: blue;
+    font-size: 1.5em;
+}
+
+button {
+    outline: none;
+    background-color: lightblue;
+    color: darkblue;
+    font-size: 2em;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 4px;
+
+}
+
+h1, h2 {
+    color: black;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+
+}
+/*frame of page, 100% of veiw height (vh)*/
+.outer-container {
+    padding: 5px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+/* timer */
+.top-bar p {
+    float: right;
+}
+/* inside container that holds the quiz challenge and is auto margined horizontally*/
+.inner-container {
+    background-color: lightcyan;
+    height: 100em;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+/* quiz intro and main share properties*/
+/* Header/Quiz introduction section*/
+.quiz-intro, main {
+    display: none;
+    margin-top: 10vh;
+    font-size: 10px;
+}
+
+.quiz-intro p {
+    text-align: center;
+}
+/*display block, margin auto will center a button*/
+.quiz-intro button {
+    display: block;
+    margin: 0 auto;
+
+}
+
+/* main section that holds the quiz*/
+.main {
+    display: block;
+
+}
+
+/*question screen*/
+.question-screen {
+    display: none;
+}
+
+/*quiz-finish screen*/
+.quiz-finish {
+    display: none;
+}
+/*highscores screen*/
+.highscores {
+    display: block;
+}
+
+.highscores ol {
+    overflow-y: scroll;
+    max-height: 200px;
+}

@@ -4,9 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Web Quiz 04</title>
+
 </head>
 <body>
-    
+    <!-- main outer div-->
+  <div class="outer-container">
+    <!--top bar section-->
+    <div class="top-bar">
+        <button>View Highscores</button>
+        <p>Timer: 00:00</p>
+    </div>
+    <!-- inner div section-->
+    <div class="inner-container">
+        <!-- main header/quiz intro-->
+        <header class="quiz-intro">
+            <h1>Welcome to the JavaScript Fundamentals Quiz!</h1>
+            <p> Try to answer the following code-realted questions within the time limit (75 second).  For every correct answer you will get 10 seconds added to your time and for every incorrect answer you will get -10 deducted from your time!</p>
+            <button>Start Quiz</button>
+        </header>
+        <!-- main quiz content-->
+        <main>
+            <section class="question-screen">
+                <h2>Question Here</h2>
+                <ul> <!-- questions will be on js-->
+                    <li><button>Answer 1</button></li>
+                    <li><button>Answer 2</button></li>
+                    <li><button>Answer 3</button></li>
+                    <li><button>Answer 4</button></li>
+                </ul>
+            </section>
+            <!-- quiz final results screen, js-->
+            <section class="quiz-finish">
+                <h2>Quiz Finished!</h2>
+                <p>Your Score: 00</p>
+                <div>
+                    <label for="">Enter Initials:</label>
+                    <input type="text">
+                    <button>Submit</button>
+                </div>
+            </section>
+            <!-- high scores screen, js-->
+            <section class="highscores">
+                <ol>
+                    <li>itials - time</li>
+                    <li>itials - time</li>
+                    <li>itials - time</li>
+                    <li>itials - time</li>
+                </ol>
+                <button>Go Back to Start</button>
+                <button>Highscores</button>
+            </section>
+        </main>
+    </div>
+  </div>
+  <script src="./assets/script.js"></script>  
 </body>
 </html>
