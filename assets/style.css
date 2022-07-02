@@ -20,7 +20,7 @@ header {
     width: 80%;
 }
 
-#highscores:hover {
+#highscores-banner:hover {
     cursor: pointer;
     color: darkblue;
     text-align: left;
