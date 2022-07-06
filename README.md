@@ -15,7 +15,7 @@ Criteria
 
 Website Link https://libhartll.github.io/quiz-code-04/
 
-GitHub Repository Link https://github.com/LibhartLL
+GitHub Repository Link https://github.com/LibhartLL/quiz-code-04
 
 Screenshots:
  
