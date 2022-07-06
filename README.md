@@ -13,9 +13,9 @@ Criteria
 * Then he or she is shown the High Scores and asked to clear them or take the quiz again. 
 
 
-Website Link https://libhartll.github.io/PWGenerator03/
+Website Link https://libhartll.github.io/quiz-code-04/
 
-GitHub Link https://github.com/LibhartLL
+GitHub Repository Link https://github.com/LibhartLL
 
 Screenshots:
  
