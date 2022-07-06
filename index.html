@@ -1,70 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Web Quiz 04</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>JS Fundamentals Quiz</title>
+        <link rel="stylesheet" href="./assets/style.css">
+    </head>
 
-</head>
-<body>
-    <!-- top of page -->
-    <header>
-        <h4 id="highscores-banner">View Highscores</h4>
-        <h4 class="timer">Timer:<span id= "timer"></span></h4>
-    </header>
-    <!-- inner container section-->
-    <div id="inner-container" class="show">
-        <!-- main header/quiz intro-->
-        <div class="quiz-intro">
-            <h1>Welcome to the JavaScript Fundamentals Quiz!</h1>
-            <br>
-            <p> Try to answer the following code-realted questions within the time limit (75 second).  For every correct answer you will get 10 seconds added to your time and for every incorrect answer you will get -10 deducted from your time!</p>
-            <button class="btn-start" id="start-game">Start Quiz</button>
+    <body> 
+
+        <header>
+            <h4 id="view-high-scores">View High Scores</h4> 
+            <h4 class="timer">Time: <span id="timer"></span></h4>
+        </header>
+
+        <div id="starter-container" class="show">
+            <div class="container start">
+                <h1>JavaScript Fundamentals Quiz</h1>  
+                <p>Try to answer the following 10 questions within the time limit of 60 seconds.  If you answer correctly you will have +10 seconds added to your time and if you answer incorrectly you will have -10 seconds deducted from your time.</p>
+                <button class="btn startend" id="start-game">Start Quiz</button>
+            </div>    
         </div>
-    </div>
-    <!-- main quiz content-->
-       
-    <div id="question-screen" class="hide">
-        <div class="question-main">
-        <div id="question"></div>
-        <div id="answer-buttons" class="btn-list"></div>
-        </div>
-    </div>
-    <!-- quiz final results screen, js-->
-    <div id="quiz-finish" class="hide">
-        <div class="score-result">
-            <div id="score-banner">
-            <h2>Quiz Finished!</h2>
+
+        <div id="question-container" class="hide">
+            <div class="container questions">
+                <div id="question"></div>
+                <div id="answer-buttons" class="btn-grid"></div>
             </div>
         </div>
-        <form id="initials-form" class="initals">
-                <p>Enter Initials:
-                    <input type="text" name="initials" id=initials class="text-initals" />
-                <button class="btn-start" id="submit-score" type="submit">Submit Score</button></p>
-                </form>
-    </div>
 
-    <!--high scores screen, js-->
-    <div id="highscores" class="hide">
-        <div class="highscores-screen">
-            <h1 class="highscore">High Scores</h1>
-                <ol id="high-scores-list" class="score-list"></ol>
+        <div id="end-container" class="hide">
+           <div class="container end">
+            <div id=score-banner>
+                <h1>All done!</h1>
+            </div>  
+            <form id="initials-form" class="initials">
+              <p> Enter Initials:
+                <input type="text" name="initials" id="initials" class="text-input" />
+                <button class="btn startend" id="sumbit-score" type="submit">Submit</button> </p>
+              </form>
+            </div>
         </div>
-            <button class="btn" id="take-again">Take Quiz Again</button>
-            <button class="btn" id="clear-scores">Clear High Scores</button>
+
+        <div id="high-score-container" class="hide">
+          <div class="high-scores container">
+            <h1 class="high-score">High Scores</h1>
+            <ol id="high-score-list" class="score-list"></ol>
+        <div>
+            <button class="btn" id="go-back">Play Again</button>
+            <button class="btn" id="clear-high-scores">Clear high scores</button>
         </div>
-    </div>
+        </div>
     </div>
 
     <div class="hide" id="correct">
-        <h2>Correct</h2>
+        <h2>Correct :)!</h2>
     </div>
     <div class="hide" id="wrong">
-        <h2>Wrong</h2>
+        <h2>Wrong :( </h2>
     </div>
 
-    <script src="./assets/script.js"></script>
+    <script src="./assets/script.js"></script> 
 </body>
 </html>
